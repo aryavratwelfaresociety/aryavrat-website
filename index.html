@@ -20,6 +20,7 @@
     }
     header h1 {
       color: red;
+      margin: 0;
     }
     nav {
       display: flex;
@@ -35,10 +36,25 @@
     nav a:hover {
       background-color: #22543d;
     }
+    #team {
+      max-width: 1000px;
+      margin: 10px auto 20px auto;
+      text-align: left;
+      padding-left: 0;
+    }
+    #team ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 0;
+    }
+    #team li {
+      margin-bottom: 6px;
+    }
     section {
       padding: 20px;
       max-width: 1000px;
       margin: auto;
+      text-align: left;
     }
     .highlight {
       background-color: #c6f6d5;
@@ -66,12 +82,29 @@
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#work">Our Work</a>
+    <a href="#team">Our Team</a>
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- Team block aligned left, just below nav -->
+  <section id="team">
+    <h3>Our Team</h3>
+    <ul>
+      <li><strong>President:</strong> Mrs. Aradhana Dixit</li>
+      <li><strong>Vice President:</strong> Dr. Shilpa Dixit</li>
+      <li><strong>Secretary:</strong> Mr. Abhishek</li>
+      <li><strong>Treasurer:</strong> Ms. Shruti</li>
+    </ul>
+  </section>
+
+  <!-- Welcome section full width below team -->
   <section id="home">
     <h2>Welcome</h2>
-    <p>The Aryavrat Welfare Society is a non-governmental organization dedicated to promoting education, healthcare, women empowerment, environmental sustainability, and community welfare across India.</p>
+    <p>The Aryavrat Welfare Society is a non-governmental organization dedicated to promoting education, healthcare, women empowerment, environmental sustainability, and community welfare across India. Founded on the principles of compassion and service, we strive to uplift marginalized communities by providing them access to essential resources and opportunities for growth.</p>
+    
+    <p>Our dedicated team works tirelessly to implement sustainable projects that make a real difference on the ground. Through awareness campaigns, skill development workshops, and grassroots initiatives, we aim to empower individuals and strengthen communities for a better future.</p>
+    
+    <p>Join us on our journey as we work together to create a society where everyone has the chance to thrive with dignity, respect, and hope.</p>
   </section>
 
   <section id="about">
@@ -86,7 +119,7 @@
     <div class="highlight">📚 Education for All</div>
     <div class="highlight">💉 Health & Sanitation Drives</div>
     <div class="highlight">🌱 Environmental Conservation</div>
-    <div class="highlight"> Water Conservation</div>
+    <div class="highlight">Water Conservation</div>
 
     <h3>Additional Focus Areas</h3>
     <p>A key focus of Aryavrat Welfare Society is water conservation. The organization undertakes projects that revive ancient water management techniques like stepwells (baolis), rainwater harvesting systems, and community water storage practices rooted in Indian tradition. Through awareness drives, workshops, and field programs, it encourages responsible water usage and educates communities about the importance of preserving water resources.</p>
