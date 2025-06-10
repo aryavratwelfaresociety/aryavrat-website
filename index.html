@@ -6,28 +6,26 @@
   <title>Aryavrat Welfare Society</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Times New Roman", serif;
       margin: 0;
       padding: 0;
-      background-color: #ffe4e1; /* Peach pink */
+      background-color: #ffc0cb; /* Peach pink */
       color: #000000;
     }
     header {
-      background-color: #ffe4e1;
+      background-color: #add8e6; /* Pastel blue */
       color: navy;
       padding: 20px;
       text-align: center;
     }
     header h1 {
       color: navy;
-    }
-    header p {
-      color: #b3d9ff; /* Pastel blue */
+      font-weight: bold;
     }
     nav {
       display: flex;
       justify-content: center;
-      background-color: #276fbf; /* Blue line */
+      background-color: #0000ff; /* Blue */
     }
     nav a {
       color: white;
@@ -36,17 +34,10 @@
       text-decoration: none;
     }
     nav a:hover {
-      background-color: #1e4f91;
-    }
-    .names {
-      text-align: left;
-      padding: 10px 20px;
-    }
-    .names p {
-      margin: 5px 0;
+      background-color: #00008b; /* Darker blue */
     }
     section {
-      padding: 10px 20px 20px;
+      padding: 20px;
       max-width: 1000px;
       margin: auto;
     }
@@ -57,22 +48,37 @@
       margin: 10px 0;
       color: black;
     }
+    .names {
+      position: absolute;
+      top: 95px;
+      left: 10px;
+      text-align: left;
+      font-weight: bold;
+    }
+    .live-news {
+      background-color: #f0f8ff;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 1000px;
+      border-radius: 10px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
     footer {
       background-color: #e2e8f0;
       text-align: center;
       padding: 15px;
       font-size: 0.9em;
       color: #555;
-    }
-    .live-news {
-      background-color: #f0f8ff;
-      padding: 15px;
-      border-radius: 8px;
-      margin: 20px auto;
-      max-width: 1000px;
-    }
-    .live-news h3 {
-      margin-top: 0;
     }
   </style>
 </head>
@@ -84,27 +90,27 @@
 
   <nav>
     <a href="#home">Home</a>
-    <a href="#about-org">About the Organisation</a>
+    <a href="#aboutorg">About the Organisation</a>
     <a href="#about">About Us</a>
     <a href="#work">Our Work</a>
-    <a href="#news">Live News</a>
+    <a href="#gallery">Photo Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <div class="names">
-    <p><strong>President:</strong> Mrs. Aradhana Dixit</p>
-    <p><strong>Vice President:</strong> Dr. Shilpa Dixit</p>
-    <p><strong>Secretary:</strong> Mr. Abhishek</p>
-    <p><strong>Treasurer:</strong> Ms. Shruti</p>
+    <p>President: Mrs. Aradhana Dixit</p>
+    <p>Vice President: Dr. Shilpa Dixit</p>
+    <p>Secretary: Mr. Abhishek</p>
+    <p>Treasurer: Ms. Shruti</p>
   </div>
 
   <section id="home">
-    <h2 style="margin-top: 10px;">Welcome</h2>
-    <p>The Aryavrat Welfare Society is a non-governmental organization dedicated to promoting education, healthcare, women empowerment, environmental sustainability, and community welfare across India. We strive to preserve India’s heritage while building a progressive and sustainable future.</p>
+    <h2><strong>Welcome</strong></h2>
+    <p>Welcome to Aryavrat Welfare Society, a platform devoted to empowering communities through sustainable and culturally enriched initiatives. We strive to bridge traditional knowledge with modern practices to ensure holistic development and social upliftment for all.</p>
   </section>
 
-  <section id="about-org">
-    <h2>About the Organisation</h2>
+  <section id="aboutorg">
+    <h2><strong>About the Organisation</strong></h2>
     <p>Aryavrat Welfare Society is a dedicated non-profit organization committed to promoting sustainable development through the revival of traditional Indian values and practices. The society actively works in areas such as water conservation, promotion of the Indian Knowledge System (IKS), and the organization of national and international seminars and conferences on a wide range of social and cultural issues.</p>
     <p>A key focus of Aryavrat Welfare Society is water conservation. The organization undertakes projects that revive ancient water management techniques like stepwells (baolis), rainwater harvesting systems, and community water storage practices rooted in Indian tradition. Through awareness drives, workshops, and field programs, it encourages responsible water usage and educates communities about the importance of preserving water resources.</p>
     <p>The society is also a strong proponent of the Indian Knowledge System, which includes traditional sciences, arts, health systems like Ayurveda, and classical education methodologies. It collaborates with scholars, educational institutions, and cultural bodies to preserve and promote this rich heritage.</p>
@@ -113,32 +119,52 @@
   </section>
 
   <section id="about">
-    <h2>About Us</h2>
-    <p><strong>Mission:</strong> To preserve Indian heritage and empower marginalized communities through sustainable development, education, and traditional knowledge.</p>
-    <p><strong>Vision:</strong> To create a culturally enriched, sustainable, and equitable society by reviving India’s ancient wisdom and empowering future generations.</p>
+    <h2><strong>About Us</strong></h2>
+    <p><strong>Mission:</strong> To empower communities by promoting sustainable practices rooted in Indian traditions, fostering education, and encouraging holistic development.</p>
+    <p><strong>Vision:</strong> To create a culturally enriched and environmentally conscious society empowered through traditional knowledge and inclusive growth.</p>
     <p><strong>Values:</strong> Transparency, Compassion, Empowerment, Sustainability.</p>
   </section>
 
   <section id="work">
-    <h2>What We Do</h2>
+    <h2><strong>What We Do</strong></h2>
     <div class="highlight">📚 Education for All</div>
     <div class="highlight">💉 Health & Sanitation Drives</div>
     <div class="highlight">🌱 Environmental Conservation</div>
     <div class="highlight">💧 Water Conservation</div>
   </section>
 
-  <section id="news" class="live-news">
-    <h3>Live News</h3>
-    <p><em>Refreshes every 5 minutes — Stay tuned for live updates on water conservation, education and literacy, and Indian Knowledge Systems.</em></p>
+<section id="gallery">
+  <h2><strong>Photo Gallery</strong></h2>
+  <h3>Conferences</h3>
+  <div class="gallery-grid">
+    <img src="images/IMG-20250609-WA0027.jpg" alt="Conference Image 1" />
+    <img src="images/IMG-20250609-WA0030.jpg" alt="Conference Poster" />
+    <img src="images/IMG-20250609-WA0031.jpg" alt="Award Ceremony 1" />
+    <img src="images/IMG-20250609-WA0034.jpg" alt="Presentation Group Photo" />
+    <img src="images/IMG-20250609-WA0036.jpg" alt="Speaker Portrait 1" />
+    <img src="images/IMG-20250609-WA0038.jpg" alt="Speaker Portrait 2" />
+    <img src="images/IMG-20250609-WA0043.jpg" alt="Speaker Portrait 3" />
+    <img src="images/IMG-20250609-WA0045.jpg" alt="Speech at Podium" />
+    <img src="images/IMG-20250609-WA0046.jpg" alt="Lamp Lighting Ceremony" />
+    <img src="images/WhatsApp Image 2025-06-09 at 18.21.28_184fbc73.jpg" alt="Souvenir Cover" />
+  </div>
+</section>
+
+
+
+
+  <section class="live-news">
+    <h2><strong>Live News</strong></h2>
+    <p>Displaying recent headlines related to Water Conservation, Education & Literacy, and the Indian Knowledge System. (Updates every 5 minutes)</p>
     <ul>
-      <li>Water-saving techniques gain momentum in rural India.</li>
-      <li>National seminar highlights role of Ayurveda in modern wellness.</li>
-      <li>Literacy rates improve with new community-driven programs.</li>
+      <li><strong>Education:</strong> Government launches new digital learning platform for rural schools.</li>
+      <li><strong>Water:</strong> Maharashtra revives 300 stepwells to combat water scarcity.</li>
+      <li><strong>IKS:</strong> National seminar on Ayurveda to be held in Varanasi next week.</li>
     </ul>
   </section>
 
   <section id="contact">
-    <h2>Contact Us</h2>
+    <h2><strong>Contact Us</strong></h2>
     <p>Email: aryavratwelfaresociety@gmail.com</p>
     <p>Phone: +91-9634286698</p>
     <p>Address: Dehradun, Uttarakhand, India</p>
