@@ -2,87 +2,133 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Aryavrat Welfare Society</title>
   <style>
     body {
-      font-family: "Times New Roman", serif;
+      font-family: "Segoe UI", "Times New Roman", serif;
       margin: 0;
       padding: 0;
-      background-color: #ffc0cb; /* Peach pink */
-      color: #000000;
+      background-color: #fff0f5;
+      color: #222;
     }
+
     header {
-      background-color: #add8e6; /* Pastel blue */
+      background-color: #add8e6;
       color: navy;
-      padding: 20px;
+      padding: 30px 20px;
       text-align: center;
     }
+
     header h1 {
-      color: navy;
-      font-weight: bold;
+      font-size: 2.5em;
+      margin-bottom: 10px;
     }
+
     nav {
       display: flex;
       justify-content: center;
-      background-color: #0000ff; /* Blue */
+      background-color: #0000ff;
+      flex-wrap: wrap;
     }
+
     nav a {
       color: white;
       padding: 14px 20px;
-      display: inline-block;
       text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+      transition: background 0.3s;
     }
+
     nav a:hover {
-      background-color: #00008b; /* Darker blue */
+      background-color: #00008b;
     }
+
     section {
-      padding: 20px;
-      max-width: 1000px;
+      padding: 30px 20px;
+      max-width: 1100px;
       margin: auto;
     }
+
     .highlight {
       background-color: #c6f6d5;
-      padding: 10px;
+      padding: 12px 16px;
       border-radius: 8px;
       margin: 10px 0;
-      color: black;
-    }
-    .names {
-      position: absolute;
-      top: 95px;
-      left: 10px;
-      text-align: left;
       font-weight: bold;
     }
-    .live-news {
-      background-color: #f0f8ff;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 1000px;
-      border-radius: 10px;
+
+    .names {
+      position: absolute;
+      top: 100px;
+      left: 15px;
+      font-weight: bold;
+      font-size: 0.95em;
     }
+
+    /* === GALLERY STYLING === */
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      margin-top: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0;
+      margin: 0;
+      padding: 0;
     }
+
     .gallery-grid img {
       width: 100%;
-      height: auto;
-      border-radius: 10px;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      cursor: pointer;
     }
+
+    /* === LIGHTBOX === */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 5px solid white;
+      border-radius: 8px;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .live-news {
+      background-color: #f0f8ff;
+      padding: 25px;
+      margin-top: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
     footer {
       background-color: #e2e8f0;
       text-align: center;
-      padding: 15px;
-      font-size: 0.9em;
-      color: #555;
+      padding: 20px;
+      font-size: 0.95em;
+      color: #444;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Aryavrat Welfare Society</h1>
     <p>Empowering Lives. Building a Better Tomorrow.</p>
@@ -105,66 +151,74 @@
   </div>
 
   <section id="home">
-    <h2><strong>Welcome</strong></h2>
+    <h2>Welcome</h2>
     <p>Welcome to Aryavrat Welfare Society, a platform devoted to empowering communities through sustainable and culturally enriched initiatives. We strive to bridge traditional knowledge with modern practices to ensure holistic development and social upliftment for all.</p>
   </section>
 
   <section id="aboutorg">
-    <h2><strong>About the Organisation</strong></h2>
+    <h2>About the Organisation</h2>
     <p>Aryavrat Welfare Society is a dedicated non-profit organization committed to promoting sustainable development through the revival of traditional Indian values and practices. The society actively works in areas such as water conservation, promotion of the Indian Knowledge System (IKS), and the organization of national and international seminars and conferences on a wide range of social and cultural issues.</p>
-    <p>A key focus of Aryavrat Welfare Society is water conservation. The organization undertakes projects that revive ancient water management techniques like stepwells (baolis), rainwater harvesting systems, and community water storage practices rooted in Indian tradition. Through awareness drives, workshops, and field programs, it encourages responsible water usage and educates communities about the importance of preserving water resources.</p>
-    <p>The society is also a strong proponent of the Indian Knowledge System, which includes traditional sciences, arts, health systems like Ayurveda, and classical education methodologies. It collaborates with scholars, educational institutions, and cultural bodies to preserve and promote this rich heritage.</p>
-    <p>In addition to grassroots work, Aryavrat Welfare Society regularly organizes national and international seminars, webinars, and conferences on pressing social issues such as education, environment, health, women empowerment, and cultural preservation. These events serve as platforms for dialogue, research dissemination, and policy recommendations.</p>
-    <p>Through its multifaceted initiatives, Aryavrat Welfare Society is playing a vital role in shaping a sustainable, culturally rooted, and socially responsible future.</p>
+    <p>A key focus is water conservation—reviving ancient water management techniques like stepwells, rainwater harvesting, and community-based solutions. Through awareness drives, workshops, and field programs, it educates people about water sustainability.</p>
+    <p>It also supports the Indian Knowledge System, collaborating with experts to preserve traditions like Ayurveda, classical learning, and Vedic science.</p>
+    <p>We host impactful seminars, webinars, and conferences on issues like education, health, environment, women empowerment, and culture to create meaningful change.</p>
   </section>
 
   <section id="about">
-    <h2><strong>About Us</strong></h2>
-    <p><strong>Mission:</strong> To empower communities by promoting sustainable practices rooted in Indian traditions, fostering education, and encouraging holistic development.</p>
-    <p><strong>Vision:</strong> To create a culturally enriched and environmentally conscious society empowered through traditional knowledge and inclusive growth.</p>
+    <h2>About Us</h2>
+    <p><strong>Mission:</strong> Empower communities using sustainable, tradition-based models, with emphasis on education and holistic growth.</p>
+    <p><strong>Vision:</strong> A culturally enriched, self-reliant, and eco-conscious society guided by heritage and values.</p>
     <p><strong>Values:</strong> Transparency, Compassion, Empowerment, Sustainability.</p>
   </section>
 
   <section id="work">
-    <h2><strong>What We Do</strong></h2>
+    <h2>What We Do</h2>
     <div class="highlight">📚 Education for All</div>
     <div class="highlight">💉 Health & Sanitation Drives</div>
     <div class="highlight">🌱 Environmental Conservation</div>
     <div class="highlight">💧 Water Conservation</div>
   </section>
 
-<section id="gallery">
-  <h2><strong>Photo Gallery</strong></h2>
-  <h3>Conferences</h3>
-  <div class="gallery-grid">
-    <img src="images/IMG-20250609-WA0027.jpg" alt="Conference Image 1" />
-    <img src="images/IMG-20250609-WA0030.jpg" alt="Conference Poster" />
-    <img src="images/IMG-20250609-WA0031.jpg" alt="Award Ceremony 1" />
-    <img src="images/IMG-20250609-WA0034.jpg" alt="Presentation Group Photo" />
-    <img src="images/IMG-20250609-WA0036.jpg" alt="Speaker Portrait 1" />
-    <img src="images/IMG-20250609-WA0038.jpg" alt="Speaker Portrait 2" />
-    <img src="images/IMG-20250609-WA0043.jpg" alt="Speaker Portrait 3" />
-    <img src="images/IMG-20250609-WA0045.jpg" alt="Speech at Podium" />
-    <img src="images/IMG-20250609-WA0046.jpg" alt="Lamp Lighting Ceremony" />
-    <img src="images/WhatsApp Image 2025-06-09 at 18.21.28_184fbc73.jpg" alt="Souvenir Cover" />
-  </div>
-</section>
+  <section id="gallery">
+    <h2>Photo Gallery</h2>
+    <h3>Conferences</h3>
+    <div class="gallery-grid">
+      <a href="#img1"><img src="IMG-20250609-WA0027.jpg" alt="Photo 1" /></a>
+      <a href="#img2"><img src="IMG-20250609-WA0030.jpg" alt="Photo 2" /></a>
+      <a href="#img3"><img src="IMG-20250609-WA0031.jpg" alt="Photo 3" /></a>
+      <a href="#img4"><img src="IMG-20250609-WA0034.jpg" alt="Photo 4" /></a>
+      <a href="#img5"><img src="IMG-20250609-WA0036.jpg" alt="Photo 5" /></a>
+      <a href="#img6"><img src="IMG-20250609-WA0038.jpg" alt="Photo 6" /></a>
+      <a href="#img7"><img src="IMG-20250609-WA0043.jpg" alt="Photo 7" /></a>
+      <a href="#img8"><img src="IMG-20250609-WA0045.jpg" alt="Photo 8" /></a>
+      <a href="#img9"><img src="IMG-20250609-WA0046.jpg" alt="Photo 9" /></a>
+      <a href="#img10"><img src="WhatsApp Image 2025-06-09 at 18.21.28_184fbc73.jpg" alt="Photo 10" /></a>
+    </div>
+  </section>
 
-
-
+  <!-- LIGHTBOX VIEWERS -->
+  <div id="img1" class="lightbox"><a href="#"><img src="IMG-20250609-WA0027.jpg" alt="Enlarged Photo 1"/></a></div>
+  <div id="img2" class="lightbox"><a href="#"><img src="IMG-20250609-WA0030.jpg" alt="Enlarged Photo 2"/></a></div>
+  <div id="img3" class="lightbox"><a href="#"><img src="IMG-20250609-WA0031.jpg" alt="Enlarged Photo 3"/></a></div>
+  <div id="img4" class="lightbox"><a href="#"><img src="IMG-20250609-WA0034.jpg" alt="Enlarged Photo 4"/></a></div>
+  <div id="img5" class="lightbox"><a href="#"><img src="IMG-20250609-WA0036.jpg" alt="Enlarged Photo 5"/></a></div>
+  <div id="img6" class="lightbox"><a href="#"><img src="IMG-20250609-WA0038.jpg" alt="Enlarged Photo 6"/></a></div>
+  <div id="img7" class="lightbox"><a href="#"><img src="IMG-20250609-WA0043.jpg" alt="Enlarged Photo 7"/></a></div>
+  <div id="img8" class="lightbox"><a href="#"><img src="IMG-20250609-WA0045.jpg" alt="Enlarged Photo 8"/></a></div>
+  <div id="img9" class="lightbox"><a href="#"><img src="IMG-20250609-WA0046.jpg" alt="Enlarged Photo 9"/></a></div>
+  <div id="img10" class="lightbox"><a href="#"><img src="WhatsApp Image 2025-06-09 at 18.21.28_184fbc73.jpg" alt="Enlarged Photo 10"/></a></div>
 
   <section class="live-news">
-    <h2><strong>Live News</strong></h2>
-    <p>Displaying recent headlines related to Water Conservation, Education & Literacy, and the Indian Knowledge System. (Updates every 5 minutes)</p>
+    <h2>Live News</h2>
+    <p>Latest headlines on Water Conservation, Education & Indian Knowledge Systems:</p>
     <ul>
-      <li><strong>Education:</strong> Government launches new digital learning platform for rural schools.</li>
-      <li><strong>Water:</strong> Maharashtra revives 300 stepwells to combat water scarcity.</li>
-      <li><strong>IKS:</strong> National seminar on Ayurveda to be held in Varanasi next week.</li>
+      <li><strong>Education:</strong> Govt launches digital learning for rural schools.</li>
+      <li><strong>Water:</strong> Maharashtra revives 300 stepwells to fight drought.</li>
+      <li><strong>IKS:</strong> National Ayurveda seminar in Varanasi next week.</li>
     </ul>
   </section>
 
   <section id="contact">
-    <h2><strong>Contact Us</strong></h2>
+    <h2>Contact Us</h2>
     <p>Email: aryavratwelfaresociety@gmail.com</p>
     <p>Phone: +91-9634286698</p>
     <p>Address: Dehradun, Uttarakhand, India</p>
