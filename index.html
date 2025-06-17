@@ -6,74 +6,128 @@
   <title>Aryavrat Welfare Society</title>
   <style>
     body {
-      font-family: "Times New Roman", serif;
       margin: 0;
       padding: 0;
-      background-color: #ffc0cb;
-      color: #000;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8fafc;
+      color: #333;
     }
+
     header {
-      background-image: url('https://i.ibb.co/qLC2btM/Whats-App-Image-2025-06-09-at-18-21-27-bc625ed2.jpg');
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://i.ibb.co/TD1NzVBb/Whats-App-Image-2025-06-09-at-18-21-27-bc625ed2.jpg') no-repeat center center;
       background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 60px 20px;
+      color: #fff;
+      padding: 100px 20px 60px;
       text-align: center;
+      position: relative;
     }
+
     header h1 {
-      font-size: 3em;
-      margin: 0;
-      background: rgba(0, 0, 128, 0.6);
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 8px;
+      font-size: 3.5em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     }
+
+    header p {
+      font-size: 1.2em;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+    }
+
     nav {
       display: flex;
       justify-content: center;
-      background-color: #0000ff;
-      flex-wrap: wrap;
+      background: #1e3a8a;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
+
     nav a {
-      color: white;
-      padding: 14px 20px;
+      color: #fff;
+      padding: 15px 20px;
       text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.3s;
     }
+
     nav a:hover {
-      background-color: #00008b;
+      background: #374151;
+      transform: scale(1.1);
     }
+
     .names {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
       padding: 10px;
+      background: #e0f2fe;
       font-weight: bold;
     }
+
     section {
-      padding: 20px;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
+      padding: 30px 20px;
     }
+
+    section h2 {
+      font-size: 2em;
+      color: #1e3a8a;
+      border-bottom: 2px solid #1e3a8a;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
     .highlight {
-      background-color: #c6f6d5;
+      background: #dbeafe;
       padding: 10px;
       border-radius: 8px;
       margin: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 0;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
     }
+
     .gallery img {
       width: 100%;
-      height: 250px;
+      height: 220px;
       object-fit: cover;
-      display: block;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.4s, box-shadow 0.4s;
     }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+
+    #news-list li {
+      margin-bottom: 8px;
+    }
+
     footer {
-      background-color: #e2e8f0;
       text-align: center;
+      background: #1e3a8a;
+      color: #fff;
       padding: 15px;
-      font-size: 0.9em;
-      color: #555;
+    }
+
+    [data-scroll] {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    [data-scroll].visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
@@ -81,6 +135,7 @@
 
   <header>
     <h1>Aryavrat Welfare Society</h1>
+    <p>Empowering Lives. Building a Better Tomorrow.</p>
   </header>
 
   <nav>
@@ -93,38 +148,38 @@
   </nav>
 
   <div class="names">
-    <p>President: Mrs. Aradhana Dixit</p>
-    <p>Vice President: Dr. Shilpa Dixit</p>
-    <p>Secretary: Mr. Abhishek</p>
-    <p>Treasurer: Ms. Shruti</p>
+    <span>President: Mrs. Aradhana Dixit</span>
+    <span>Vice President: Dr. Shilpa Dixit</span>
+    <span>Secretary: Mr. Abhishek</span>
+    <span>Treasurer: Ms. Shruti</span>
   </div>
 
-  <section id="home">
+  <section id="home" data-scroll>
     <h2>Welcome</h2>
-    <p>Welcome to Aryavrat Welfare Society, dedicated to building a better tomorrow through community empowerment and sustainable development initiatives rooted in Indian traditions.</p>
+    <p>Welcome to Aryavrat Welfare Society. We strive to uplift communities through educational initiatives, water conservation, and the preservation of Indian heritage. Together, we build a more sustainable and inclusive future.</p>
   </section>
 
-  <section id="aboutorg">
+  <section id="aboutorg" data-scroll>
     <h2>About the Organisation</h2>
-    <p>Aryavrat Welfare Society is a non-profit organization focused on sustainable development through traditional Indian values, water conservation, education, health drives, and promoting the Indian Knowledge System (IKS).</p>
+    <p>Aryavrat Welfare Society is dedicated to societal welfare by integrating modern methods with Indian Knowledge Systems (IKS). Our mission is to promote sustainable living through cultural wisdom and community-driven programs.</p>
   </section>
 
-  <section id="about">
+  <section id="about" data-scroll>
     <h2>About Us</h2>
-    <p><strong>Mission:</strong> To empower communities by promoting sustainable practices rooted in Indian traditions.</p>
-    <p><strong>Vision:</strong> To create a culturally enriched and environmentally conscious society.</p>
-    <p><strong>Values:</strong> Transparency, Compassion, Empowerment, Sustainability.</p>
+    <p><strong>Mission:</strong> To empower communities with sustainable practices rooted in India’s cultural legacy.</p>
+    <p><strong>Vision:</strong> A world where tradition and progress unite for social good.</p>
+    <p><strong>Values:</strong> Integrity, Inclusivity, Sustainability, Compassion.</p>
   </section>
 
-  <section id="work">
+  <section id="work" data-scroll>
     <h2>What We Do</h2>
     <div class="highlight">📚 Education for All</div>
-    <div class="highlight">💉 Health & Sanitation Drives</div>
-    <div class="highlight">🌱 Environmental Conservation</div>
     <div class="highlight">💧 Water Conservation</div>
+    <div class="highlight">🌱 Environmental Awareness</div>
+    <div class="highlight">🩺 Health and Sanitation Initiatives</div>
   </section>
 
-  <section id="gallery">
+  <section id="gallery" data-scroll>
     <h2>Photo Gallery</h2>
     <div class="gallery">
       <img src="https://i.ibb.co/NdCyKPT8/IMG-20250609-WA0030.jpg" alt="">
@@ -139,7 +194,16 @@
     </div>
   </section>
 
-  <section id="contact">
+  <section id="live-news" data-scroll>
+    <h2>Live News</h2>
+    <ul id="news-list">
+      <li><strong>Education:</strong> Govt launches new e-learning scheme.</li>
+      <li><strong>Water:</strong> 300 stepwells restored in Rajasthan.</li>
+      <li><strong>Environment:</strong> Mega plantation drive starts in UP.</li>
+    </ul>
+  </section>
+
+  <section id="contact" data-scroll>
     <h2>Contact Us</h2>
     <p>Email: aryavratwelfaresociety@gmail.com</p>
     <p>Phone: +91-9634286698</p>
@@ -150,5 +214,36 @@
     &copy; 2025 Aryavrat Welfare Society. All rights reserved.
   </footer>
 
+  <script>
+    // Reveal on scroll
+    const scrollEls = document.querySelectorAll('[data-scroll]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    scrollEls.forEach(el => observer.observe(el));
+
+    // Live news refresh
+    const newsItems = [
+      '<strong>Education:</strong> Govt launches new e-learning scheme.',
+      '<strong>Water:</strong> 300 stepwells restored in Rajasthan.',
+      '<strong>Environment:</strong> Mega plantation drive starts in UP.',
+      '<strong>Health:</strong> Free rural health camps announced.',
+      '<strong>IKS:</strong> National conference on Ayurveda next month.'
+    ];
+    setInterval(() => {
+      const list = document.getElementById('news-list');
+      list.innerHTML = '';
+      const randomNews = newsItems.sort(() => 0.5 - Math.random()).slice(0, 3);
+      randomNews.forEach(item => {
+        const li = document.createElement('li');
+        li.innerHTML = item;
+        list.appendChild(li);
+      });
+    }, 180000);
+  </script>
 </body>
 </html>
