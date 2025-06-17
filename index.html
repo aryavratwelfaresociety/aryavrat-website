@@ -17,24 +17,24 @@
       background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://i.ibb.co/TD1NzVBb/Whats-App-Image-2025-06-09-at-18-21-27-bc625ed2.jpg') no-repeat center center;
       background-size: cover;
       color: #fff;
-      padding: 100px 20px 60px;
+      padding: 80px 20px 50px;
       text-align: center;
-      position: relative;
     }
 
     header h1 {
-      font-size: 3.5em;
+      font-size: 2.8em;
       margin-bottom: 10px;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     }
 
     header p {
-      font-size: 1.2em;
+      font-size: 1.1em;
       text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
     }
 
     nav {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       background: #1e3a8a;
       position: sticky;
@@ -45,10 +45,11 @@
 
     nav a {
       color: #fff;
-      padding: 15px 20px;
+      padding: 12px 15px;
       text-decoration: none;
       font-weight: bold;
       transition: background 0.3s, transform 0.3s;
+      font-size: 0.95em;
     }
 
     nav a:hover {
@@ -60,20 +61,21 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
+      gap: 10px;
       padding: 10px;
       background: #e0f2fe;
       font-weight: bold;
+      font-size: 0.9em;
     }
 
     section {
       max-width: 1200px;
       margin: auto;
-      padding: 30px 20px;
+      padding: 25px 15px;
     }
 
     section h2 {
-      font-size: 2em;
+      font-size: 1.7em;
       color: #1e3a8a;
       border-bottom: 2px solid #1e3a8a;
       padding-bottom: 5px;
@@ -90,15 +92,15 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
     }
 
     .gallery img {
       width: 100%;
-      height: 220px;
+      height: 160px;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       transition: transform 0.4s, box-shadow 0.4s;
     }
@@ -110,13 +112,15 @@
 
     #news-list li {
       margin-bottom: 8px;
+      font-size: 0.95em;
     }
 
     footer {
       text-align: center;
       background: #1e3a8a;
       color: #fff;
-      padding: 15px;
+      padding: 12px;
+      font-size: 0.9em;
     }
 
     [data-scroll] {
@@ -128,6 +132,15 @@
     [data-scroll].visible {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    @media (min-width: 600px) {
+      header h1 { font-size: 3.5em; }
+      header p { font-size: 1.2em; }
+      nav a { font-size: 1em; padding: 15px 20px; }
+      .names { font-size: 1em; }
+      section h2 { font-size: 2em; }
+      .gallery img { height: 200px; }
     }
   </style>
 </head>
@@ -215,7 +228,7 @@
   </footer>
 
   <script>
-    // Reveal on scroll
+    // Scroll reveal
     const scrollEls = document.querySelectorAll('[data-scroll]');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -226,7 +239,7 @@
     }, { threshold: 0.1 });
     scrollEls.forEach(el => observer.observe(el));
 
-    // Live news refresh
+    // Live news
     const newsItems = [
       '<strong>Education:</strong> Govt launches new e-learning scheme.',
       '<strong>Water:</strong> 300 stepwells restored in Rajasthan.',
