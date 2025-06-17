@@ -12,76 +12,62 @@
       background-color: #ffc0cb;
       color: #000;
     }
-
     header {
-      background: url('https://i.ibb.co/qLC2btMW') no-repeat center center;
+      background-image: url('https://i.ibb.co/qLC2btM/Whats-App-Image-2025-06-09-at-18-21-27-bc625ed2.jpg');
       background-size: cover;
-      height: 250px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      background-position: center;
       color: white;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      padding: 60px 20px;
+      text-align: center;
     }
-
     header h1 {
+      font-size: 3em;
       margin: 0;
-      font-size: 2.5em;
+      background: rgba(0, 0, 128, 0.6);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 8px;
     }
-
     nav {
       display: flex;
       justify-content: center;
       background-color: #0000ff;
       flex-wrap: wrap;
     }
-
     nav a {
       color: white;
       padding: 14px 20px;
       text-decoration: none;
     }
-
     nav a:hover {
       background-color: #00008b;
     }
-
     .names {
-      text-align: center;
-      font-weight: bold;
-      margin: 10px 0;
-    }
-
-    #live-news {
-      background: #fff3cd;
-      border-left: 6px solid #ffa500;
       padding: 10px;
-      margin: 10px auto;
-      max-width: 1000px;
       font-weight: bold;
-      text-align: center;
     }
-
     section {
       padding: 20px;
       max-width: 1000px;
       margin: auto;
     }
-
+    .highlight {
+      background-color: #c6f6d5;
+      padding: 10px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 10px;
+      gap: 0;
     }
-
     .gallery img {
       width: 100%;
-      height: 200px;
+      height: 250px;
       object-fit: cover;
-      border-radius: 8px;
+      display: block;
     }
-
     footer {
       background-color: #e2e8f0;
       text-align: center;
@@ -95,7 +81,6 @@
 
   <header>
     <h1>Aryavrat Welfare Society</h1>
-    <p>Empowering Lives. Building a Better Tomorrow.</p>
   </header>
 
   <nav>
@@ -108,31 +93,35 @@
   </nav>
 
   <div class="names">
-    <p>President: Mrs. Aradhana Dixit | Vice President: Dr. Shilpa Dixit | Secretary: Mr. Abhishek | Treasurer: Ms. Shruti</p>
-  </div>
-
-  <div id="live-news">
-    Loading latest news...
+    <p>President: Mrs. Aradhana Dixit</p>
+    <p>Vice President: Dr. Shilpa Dixit</p>
+    <p>Secretary: Mr. Abhishek</p>
+    <p>Treasurer: Ms. Shruti</p>
   </div>
 
   <section id="home">
     <h2>Welcome</h2>
-    <p>Welcome to Aryavrat Welfare Society. We are dedicated to community service and sustainable development through Indian values. We aim to uplift lives, foster inclusion, and promote environmental sustainability for a better future.</p>
+    <p>Welcome to Aryavrat Welfare Society, dedicated to building a better tomorrow through community empowerment and sustainable development initiatives rooted in Indian traditions.</p>
   </section>
 
   <section id="aboutorg">
     <h2>About the Organisation</h2>
-    <p>Aryavrat Welfare Society is committed to working for the welfare of society by addressing critical issues like education, health, environment, and social justice. Our team believes in collective action to bring sustainable change at the grassroots level.</p>
+    <p>Aryavrat Welfare Society is a non-profit organization focused on sustainable development through traditional Indian values, water conservation, education, health drives, and promoting the Indian Knowledge System (IKS).</p>
   </section>
 
   <section id="about">
     <h2>About Us</h2>
-    <p>We are a non-profit organization driven by a passion for service. Founded by dedicated individuals, Aryavrat Welfare Society has been active in various rural and urban areas to make a positive impact on lives through different initiatives.</p>
+    <p><strong>Mission:</strong> To empower communities by promoting sustainable practices rooted in Indian traditions.</p>
+    <p><strong>Vision:</strong> To create a culturally enriched and environmentally conscious society.</p>
+    <p><strong>Values:</strong> Transparency, Compassion, Empowerment, Sustainability.</p>
   </section>
 
   <section id="work">
-    <h2>Our Work</h2>
-    <p>Our programs cover diverse areas including water conservation, tree plantation, women empowerment, child education, and healthcare. We collaborate with local communities, schools, and other NGOs to ensure meaningful outcomes.</p>
+    <h2>What We Do</h2>
+    <div class="highlight">📚 Education for All</div>
+    <div class="highlight">💉 Health & Sanitation Drives</div>
+    <div class="highlight">🌱 Environmental Conservation</div>
+    <div class="highlight">💧 Water Conservation</div>
   </section>
 
   <section id="gallery">
@@ -152,30 +141,14 @@
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>Email: info@aryavratwelfare.org | Phone: +91-9876543210</p>
+    <p>Email: aryavratwelfaresociety@gmail.com</p>
+    <p>Phone: +91-9634286698</p>
+    <p>Address: Dehradun, Uttarakhand, India</p>
   </section>
 
   <footer>
     &copy; 2025 Aryavrat Welfare Society. All rights reserved.
   </footer>
-
-  <script>
-    const newsEl = document.getElementById("live-news");
-
-    async function fetchNews() {
-      const newsItems = [
-        "Water conservation project launched in rural areas.",
-        "Tree plantation drive achieves 10,000 saplings planted!",
-        "Health camp benefits over 500 villagers this week.",
-        "New skill development center inaugurated for women."
-      ];
-      const randomNews = newsItems[Math.floor(Math.random() * newsItems.length)];
-      newsEl.textContent = randomNews;
-    }
-
-    fetchNews();
-    setInterval(fetchNews, 180000); // 3 minutes = 180000 ms
-  </script>
 
 </body>
 </html>
