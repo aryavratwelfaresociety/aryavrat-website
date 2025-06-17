@@ -6,23 +6,28 @@
   <title>Aryavrat Welfare Society</title>
   <style>
     body {
-      font-family: "Segoe UI", "Times New Roman", serif;
+      font-family: "Times New Roman", serif;
       margin: 0;
       padding: 0;
-      background-color: #fff0f5;
-      color: #222;
+      background-color: #ffc0cb;
+      color: #000;
     }
 
     header {
-      background-color: #add8e6;
-      color: navy;
-      padding: 30px 20px;
-      text-align: center;
+      background: url('https://i.ibb.co/qLC2btMW') no-repeat center center;
+      background-size: cover;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
 
     header h1 {
+      margin: 0;
       font-size: 2.5em;
-      margin-bottom: 10px;
     }
 
     nav {
@@ -36,94 +41,53 @@
       color: white;
       padding: 14px 20px;
       text-decoration: none;
-      font-weight: bold;
-      font-size: 1em;
-      transition: background 0.3s;
     }
 
     nav a:hover {
       background-color: #00008b;
     }
 
+    .names {
+      text-align: center;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    #live-news {
+      background: #fff3cd;
+      border-left: 6px solid #ffa500;
+      padding: 10px;
+      margin: 10px auto;
+      max-width: 1000px;
+      font-weight: bold;
+      text-align: center;
+    }
+
     section {
-      padding: 30px 20px;
-      max-width: 1100px;
+      padding: 20px;
+      max-width: 1000px;
       margin: auto;
     }
 
-    .highlight {
-      background-color: #c6f6d5;
-      padding: 12px 16px;
-      border-radius: 8px;
-      margin: 10px 0;
-      font-weight: bold;
-    }
-
-    .names {
-      position: absolute;
-      top: 100px;
-      left: 15px;
-      font-weight: bold;
-      font-size: 0.95em;
-    }
-
-    /* === GALLERY STYLING === */
-    .gallery-grid {
+    .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 0;
-      margin: 0;
-      padding: 0;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 10px;
     }
 
-    .gallery-grid img {
+    .gallery img {
       width: 100%;
       height: 200px;
       object-fit: cover;
-      display: block;
-      cursor: pointer;
-    }
-
-    /* === LIGHTBOX === */
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.9);
-      justify-content: center;
-      align-items: center;
-    }
-
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border: 5px solid white;
       border-radius: 8px;
-    }
-
-    .lightbox:target {
-      display: flex;
-    }
-
-    .live-news {
-      background-color: #f0f8ff;
-      padding: 25px;
-      margin-top: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     footer {
       background-color: #e2e8f0;
       text-align: center;
-      padding: 20px;
-      font-size: 0.95em;
-      color: #444;
-      margin-top: 40px;
+      padding: 15px;
+      font-size: 0.9em;
+      color: #555;
     }
   </style>
 </head>
@@ -144,88 +108,74 @@
   </nav>
 
   <div class="names">
-    <p>President: Mrs. Aradhana Dixit</p>
-    <p>Vice President: Dr. Shilpa Dixit</p>
-    <p>Secretary: Mr. Abhishek</p>
-    <p>Treasurer: Ms. Shruti</p>
+    <p>President: Mrs. Aradhana Dixit | Vice President: Dr. Shilpa Dixit | Secretary: Mr. Abhishek | Treasurer: Ms. Shruti</p>
+  </div>
+
+  <div id="live-news">
+    Loading latest news...
   </div>
 
   <section id="home">
     <h2>Welcome</h2>
-    <p>Welcome to Aryavrat Welfare Society, a platform devoted to empowering communities through sustainable and culturally enriched initiatives. We strive to bridge traditional knowledge with modern practices to ensure holistic development and social upliftment for all.</p>
+    <p>Welcome to Aryavrat Welfare Society. We are dedicated to community service and sustainable development through Indian values. We aim to uplift lives, foster inclusion, and promote environmental sustainability for a better future.</p>
   </section>
 
   <section id="aboutorg">
     <h2>About the Organisation</h2>
-    <p>Aryavrat Welfare Society is a dedicated non-profit organization committed to promoting sustainable development through the revival of traditional Indian values and practices. The society actively works in areas such as water conservation, promotion of the Indian Knowledge System (IKS), and the organization of national and international seminars and conferences on a wide range of social and cultural issues.</p>
-    <p>A key focus is water conservation—reviving ancient water management techniques like stepwells, rainwater harvesting, and community-based solutions. Through awareness drives, workshops, and field programs, it educates people about water sustainability.</p>
-    <p>It also supports the Indian Knowledge System, collaborating with experts to preserve traditions like Ayurveda, classical learning, and Vedic science.</p>
-    <p>We host impactful seminars, webinars, and conferences on issues like education, health, environment, women empowerment, and culture to create meaningful change.</p>
+    <p>Aryavrat Welfare Society is committed to working for the welfare of society by addressing critical issues like education, health, environment, and social justice. Our team believes in collective action to bring sustainable change at the grassroots level.</p>
   </section>
 
   <section id="about">
     <h2>About Us</h2>
-    <p><strong>Mission:</strong> Empower communities using sustainable, tradition-based models, with emphasis on education and holistic growth.</p>
-    <p><strong>Vision:</strong> A culturally enriched, self-reliant, and eco-conscious society guided by heritage and values.</p>
-    <p><strong>Values:</strong> Transparency, Compassion, Empowerment, Sustainability.</p>
+    <p>We are a non-profit organization driven by a passion for service. Founded by dedicated individuals, Aryavrat Welfare Society has been active in various rural and urban areas to make a positive impact on lives through different initiatives.</p>
   </section>
 
   <section id="work">
-    <h2>What We Do</h2>
-    <div class="highlight">📚 Education for All</div>
-    <div class="highlight">💉 Health & Sanitation Drives</div>
-    <div class="highlight">🌱 Environmental Conservation</div>
-    <div class="highlight">💧 Water Conservation</div>
+    <h2>Our Work</h2>
+    <p>Our programs cover diverse areas including water conservation, tree plantation, women empowerment, child education, and healthcare. We collaborate with local communities, schools, and other NGOs to ensure meaningful outcomes.</p>
   </section>
 
   <section id="gallery">
     <h2>Photo Gallery</h2>
-    <h3>Conferences</h3>
-    <div class="gallery-grid">
-      <a href="#img1"><img src="IMG-20250609-WA0027.jpg" alt="Photo 1" /></a>
-      <a href="#img2"><img src="IMG-20250609-WA0030.jpg" alt="Photo 2" /></a>
-      <a href="#img3"><img src="IMG-20250609-WA0031.jpg" alt="Photo 3" /></a>
-      <a href="#img4"><img src="IMG-20250609-WA0034.jpg" alt="Photo 4" /></a>
-      <a href="#img5"><img src="IMG-20250609-WA0036.jpg" alt="Photo 5" /></a>
-      <a href="#img6"><img src="IMG-20250609-WA0038.jpg" alt="Photo 6" /></a>
-      <a href="#img7"><img src="IMG-20250609-WA0043.jpg" alt="Photo 7" /></a>
-      <a href="#img8"><img src="IMG-20250609-WA0045.jpg" alt="Photo 8" /></a>
-      <a href="#img9"><img src="IMG-20250609-WA0046.jpg" alt="Photo 9" /></a>
-      <a href="#img10"><img src="WhatsApp Image 2025-06-09 at 18.21.28_184fbc73.jpg" alt="Photo 10" /></a>
+    <div class="gallery">
+      <img src="https://i.ibb.co/NdCyKPT8/IMG-20250609-WA0030.jpg" alt="">
+      <img src="https://i.ibb.co/DH4D4r1r/IMG-20250609-WA0031.jpg" alt="">
+      <img src="https://i.ibb.co/d0wYwSfT/IMG-20250609-WA0034.jpg" alt="">
+      <img src="https://i.ibb.co/TDk22D2S/IMG-20250609-WA0036.jpg" alt="">
+      <img src="https://i.ibb.co/G4VzJW1C/IMG-20250609-WA0038.jpg" alt="">
+      <img src="https://i.ibb.co/DgKX7BMS/IMG-20250609-WA0043.jpg" alt="">
+      <img src="https://i.ibb.co/0R0PRQD3/IMG-20250609-WA0045.jpg" alt="">
+      <img src="https://i.ibb.co/kszxXmg4/IMG-20250609-WA0046.jpg" alt="">
+      <img src="https://i.ibb.co/vxKH141z/Whats-App-Image-2025-06-09-at-18-21-28-184fbc73.jpg" alt="">
     </div>
-  </section>
-
-  <!-- LIGHTBOX VIEWERS -->
-  <div id="img1" class="lightbox"><a href="#"><img src="IMG-20250609-WA0027.jpg" alt="Enlarged Photo 1"/></a></div>
-  <div id="img2" class="lightbox"><a href="#"><img src="IMG-20250609-WA0030.jpg" alt="Enlarged Photo 2"/></a></div>
-  <div id="img3" class="lightbox"><a href="#"><img src="IMG-20250609-WA0031.jpg" alt="Enlarged Photo 3"/></a></div>
-  <div id="img4" class="lightbox"><a href="#"><img src="IMG-20250609-WA0034.jpg" alt="Enlarged Photo 4"/></a></div>
-  <div id="img5" class="lightbox"><a href="#"><img src="IMG-20250609-WA0036.jpg" alt="Enlarged Photo 5"/></a></div>
-  <div id="img6" class="lightbox"><a href="#"><img src="IMG-20250609-WA0038.jpg" alt="Enlarged Photo 6"/></a></div>
-  <div id="img7" class="lightbox"><a href="#"><img src="IMG-20250609-WA0043.jpg" alt="Enlarged Photo 7"/></a></div>
-  <div id="img8" class="lightbox"><a href="#"><img src="IMG-20250609-WA0045.jpg" alt="Enlarged Photo 8"/></a></div>
-  <div id="img9" class="lightbox"><a href="#"><img src="IMG-20250609-WA0046.jpg" alt="Enlarged Photo 9"/></a></div>
-  <div id="img10" class="lightbox"><a href="#"><img src="WhatsApp Image 2025-06-09 at 18.21.28_184fbc73.jpg" alt="Enlarged Photo 10"/></a></div>
-
-  <section class="live-news">
-    <h2>Live News</h2>
-    <p>Latest headlines on Water Conservation, Education & Indian Knowledge Systems:</p>
-    <ul>
-      <li><strong>Education:</strong> Govt launches digital learning for rural schools.</li>
-      <li><strong>Water:</strong> Maharashtra revives 300 stepwells to fight drought.</li>
-      <li><strong>IKS:</strong> National Ayurveda seminar in Varanasi next week.</li>
-    </ul>
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>Email: aryavratwelfaresociety@gmail.com</p>
-    <p>Phone: +91-9634286698</p>
-    <p>Address: Dehradun, Uttarakhand, India</p>
+    <p>Email: info@aryavratwelfare.org | Phone: +91-9876543210</p>
   </section>
 
   <footer>
     &copy; 2025 Aryavrat Welfare Society. All rights reserved.
   </footer>
+
+  <script>
+    const newsEl = document.getElementById("live-news");
+
+    async function fetchNews() {
+      const newsItems = [
+        "Water conservation project launched in rural areas.",
+        "Tree plantation drive achieves 10,000 saplings planted!",
+        "Health camp benefits over 500 villagers this week.",
+        "New skill development center inaugurated for women."
+      ];
+      const randomNews = newsItems[Math.floor(Math.random() * newsItems.length)];
+      newsEl.textContent = randomNews;
+    }
+
+    fetchNews();
+    setInterval(fetchNews, 180000); // 3 minutes = 180000 ms
+  </script>
+
 </body>
 </html>
