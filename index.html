@@ -123,6 +123,23 @@
       box-shadow: 0 4px 16px rgba(0,0,0,0.2);
     }
 
+    .blog-entry {
+      background: #f1f5f9;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .blog-entry h3 {
+      color: #1e3a8a;
+      margin-top: 0;
+    }
+
+    .blog-entry ul {
+      padding-left: 20px;
+    }
+
     #news-list li {
       margin-bottom: 8px;
       font-size: 0.95em;
@@ -172,6 +189,7 @@
     <a href="#about">About Us</a>
     <a href="#work">Our Work</a>
     <a href="#gallery">Photo Gallery</a>
+    <a href="#blogs">Blog</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -224,6 +242,41 @@
     </div>
   </section>
 
+  <section id="blogs" data-scroll>
+    <h2>Blog</h2>
+
+    <div class="blog-entry">
+      <h3>Saving Every Drop: Aryavrat Welfare Society’s Mission for Water Conservation</h3>
+      <p><strong>By Tanmay Purohit</strong></p>
+      <p>Water is life — yet, across India, millions struggle daily due to water scarcity. As climate change intensifies and water bodies shrink, conserving this precious resource has become not just an environmental need, but a moral duty.</p>
+      <p><strong>Our Initiatives:</strong></p>
+      <ul>
+        <li><strong>Rainwater Harvesting Projects:</strong> Installed systems in villages, schools, and community centers.</li>
+        <li><strong>Revival of Ponds and Lakes:</strong> Desilting, cleanups, and tree plantation around water bodies.</li>
+        <li><strong>Water-Efficient Farming:</strong> Promoting drip irrigation, sprinklers, and organic practices.</li>
+        <li><strong>School Awareness Programs:</strong> Interactive activities and competitions on water conservation.</li>
+        <li><strong>Community Clean-Up Drives:</strong> Preventing water pollution and spreading awareness.</li>
+      </ul>
+      <p><strong>How You Can Help:</strong> Volunteer, donate, and spread the word — every drop counts!</p>
+    </div>
+
+    <div class="blog-entry">
+      <h3>Together for Tomorrow: How Aryavrat Welfare Society is Saving Our Environment</h3>
+      <p>At Aryavrat Welfare Society, we believe that protecting our environment is not just a responsibility — it’s a necessity for securing a better future for generations to come.</p>
+      <p><strong>Why It Matters:</strong> Pollution, deforestation, water scarcity, and poor waste management threaten our survival. We must act now.</p>
+      <p><strong>Our Green Actions:</strong></p>
+      <ul>
+        <li>🌱 Tree Plantation Drives</li>
+        <li>💧 Water Conservation Workshops</li>
+        <li>♻️ Waste Management Awareness</li>
+        <li>🌞 Promotion of Sustainable Energy</li>
+        <li>📚 Environmental Education</li>
+      </ul>
+      <p><strong>How You Can Help:</strong> Reduce plastic, conserve water and electricity, join our drives, and raise awareness.</p>
+      <p><strong>Our Vision:</strong> A future where clean air, pure water, and lush greenery are a reality for all — one step, one act, one tree at a time.</p>
+    </div>
+  </section>
+
   <section id="live-news" data-scroll>
     <h2>Live News</h2>
     <ul id="news-list">
@@ -245,7 +298,6 @@
   </footer>
 
   <script>
-    // Scroll reveal
     const scrollEls = document.querySelectorAll('[data-scroll]');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -256,7 +308,6 @@
     }, { threshold: 0.1 });
     scrollEls.forEach(el => observer.observe(el));
 
-    // Live news
     const newsItems = [
       '<strong>Education:</strong> Govt launches new e-learning scheme.',
       '<strong>Water:</strong> 300 stepwells restored in Rajasthan.',
