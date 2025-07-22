@@ -70,15 +70,35 @@
       transform: scale(1.1);
     }
 
-    .names {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      padding: 10px;
+    .team {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      justify-items: center;
+      align-items: center;
+      padding: 20px;
       background: #e0f2fe;
+    }
+
+    .team-member {
+      text-align: center;
+    }
+
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #1e3a8a;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      margin-bottom: 8px;
+    }
+
+    .team-member span {
+      display: block;
       font-weight: bold;
-      font-size: 0.9em;
+      font-size: 0.95em;
+      color: #1e3a8a;
     }
 
     section {
@@ -168,7 +188,6 @@
       header h1 { font-size: 3.5em; }
       header p { font-size: 1.2em; }
       nav a { font-size: 1em; padding: 15px 20px; }
-      .names { font-size: 1em; }
       section h2 { font-size: 2em; }
       .gallery img { height: 200px; }
       .logo { width: 100px; height: 100px; }
@@ -193,11 +212,27 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <div class="names">
-    <span>President: Mrs. Aradhana Dixit</span>
-    <span>Vice President: Dr. Shilpa Dixit</span>
-    <span>Secretary: Mr. Abhishek</span>
-    <span>Treasurer: Ms. Shruti</span>
+  <div class="team">
+    <div class="team-member">
+      <img src="https://i.ibb.co/99bwYpHd/Vice-President.jpg" alt="Vice President">
+      <span>Vice President</span>
+    </div>
+    <div class="team-member">
+      <img src="https://i.ibb.co/4ZCfwqs6/Vice-President-2.jpg" alt="Vice President 2">
+      <span>Vice President 2</span>
+    </div>
+    <div class="team-member">
+      <img src="https://i.ibb.co/xKfchmbW/Tresrare.jpg" alt="Treasurer">
+      <span>Treasurer</span>
+    </div>
+    <div class="team-member">
+      <img src="https://i.ibb.co/FqgSxp3h/Secretary.jpg" alt="Secretary">
+      <span>Secretary</span>
+    </div>
+    <div class="team-member">
+      <img src="https://i.ibb.co/jkLB0HxD/Advocate.jpg" alt="Advocate">
+      <span>Advocate</span>
+    </div>
   </div>
 
   <section id="home" data-scroll>
