@@ -214,6 +214,10 @@
 
   <div class="team">
     <div class="team-member">
+      <img src="https://i.ibb.co/ndBxT6R/President.jpg" alt="President">
+      <span>President</span>
+    </div>
+    <div class="team-member">
       <img src="https://i.ibb.co/99bwYpHd/Vice-President.jpg" alt="Vice President">
       <span>Vice President</span>
     </div>
@@ -232,6 +236,14 @@
     <div class="team-member">
       <img src="https://i.ibb.co/jkLB0HxD/Advocate.jpg" alt="Advocate">
       <span>Advocate</span>
+    </div>
+    <div class="team-member">
+      <img src="https://i.ibb.co/twysd55h/Joint-secretary.jpg" alt="Joint Secretary">
+      <span>Joint Secretary</span>
+    </div>
+    <div class="team-member">
+      <img src="https://i.ibb.co/fYXXt0GQ/Joint-secretary-2.jpg" alt="Joint Secretary 2">
+      <span>Joint Secretary 2</span>
     </div>
   </div>
 
@@ -321,6 +333,21 @@
     </ul>
   </section>
 
+<section id="comments" data-scroll>
+  <h2>Public Comments</h2>
+  <div style="max-width: 800px; margin: auto;">
+    <form id="comment-form" style="display: flex; flex-direction: column; gap: 10px;">
+      <input type="text" id="name" placeholder="Your Name" required style="padding: 10px; border-radius: 6px; border: 1px solid #ccc;">
+      <textarea id="comment" placeholder="Write your comment here..." required style="padding: 10px; border-radius: 6px; border: 1px solid #ccc; resize: vertical;"></textarea>
+      <button type="submit" style="padding: 10px; background-color: #1e3a8a; color: white; border: none; border-radius: 6px; cursor: pointer;">Submit</button>
+    </form>
+    <div id="comment-list" style="margin-top: 20px;">
+      <!-- Comments will appear here -->
+    </div>
+  </div>
+</section>
+
+
   <section id="contact" data-scroll>
     <h2>Contact Us</h2>
     <p>Email: aryavratwelfaresociety@gmail.com</p>
@@ -361,5 +388,24 @@
       });
     }, 180000);
   </script>
+
+<script>
+  document.getElementById('comment-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const comment = document.getElementById('comment').value.trim();
+
+    if (name && comment) {
+      const commentBox = document.createElement('div');
+      commentBox.style.padding = '10px';
+      commentBox.style.borderBottom = '1px solid #ccc';
+      commentBox.innerHTML = `<strong>${name}</strong><p>${comment}</p>`;
+      document.getElementById('comment-list').prepend(commentBox);
+      this.reset();
+    }
+  });
+</script>
+
+
 </body>
 </html>
